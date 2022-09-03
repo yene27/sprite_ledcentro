@@ -1,6 +1,6 @@
 let sprite = game.createSprite(2, 2)
 game.setScore(0)
-game.setLife(2)
+game.setLife(3)
 basic.forever(function () {
     if (input.buttonIsPressed(Button.A) || input.buttonIsPressed(Button.B)) {
         basic.pause(200)
@@ -11,6 +11,7 @@ basic.forever(function () {
             game.removeLife(1)
         }
     }
+    basic.pause(100)
     sprite.move(1)
     sprite.ifOnEdgeBounce()
 })

@@ -1,6 +1,6 @@
 let sprite = game.createSprite(2, 2)
 game.setScore(0)
-game.setLife(3)
+game.setLife(2)
 basic.forever(function () {
     if (input.buttonIsPressed(Button.A) || input.buttonIsPressed(Button.B)) {
         basic.pause(200)
@@ -8,7 +8,6 @@ basic.forever(function () {
             basic.showIcon(IconNames.Happy)
             game.setScore(game.score() + 1)
         } else {
-            basic.showIcon(IconNames.Sad)
             game.removeLife(1)
         }
     }
